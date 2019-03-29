@@ -1,0 +1,11 @@
+[MSVC Status File]
+Version=1.00
+ProjectType=10
+External=1
+DebugBuildCmd=NMAKE /f LANEVIEW.MAK
+ReleaseBuildCmd=NMAKE /f LANEVIEW.MAK
+RebuildOption=/a
+BuildMode=1
+TargetName=G:\LV441\SOURCE\LANEVIEW.EXE
+BrkptCount=0
+WatchCount=0
