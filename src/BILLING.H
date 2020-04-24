@@ -3,16 +3,16 @@
 // $Revision:   1.2  $
 //
 // HISTORY:
-// Author				Date		Description
+// Author            Date      Description
 // --------------------------------------------------------------------------
 //
 //
 //
 // DESCRIPTION
 // ==========================================================================
-//	Copyright 1996 TeCom Inc. All rights reserved
+//   Copyright 1996 TeCom Inc. All rights reserved
 // ==========================================================================
 
-//extern int	billing_read;
+//extern int   billing_read;
 
-void	BillingMenu(void);
+void   BillingMenu(void);

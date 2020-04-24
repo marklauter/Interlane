@@ -3,18 +3,18 @@
 
 typedef struct
 {
-	SCREEN_OBJECT_T so;
-	//UCHAR 	text[51];
-	UCHAR 	*text;
-	int		checked;	// use TRUE or FALSE
-	void 	(_far * cbf)();	// cbf() calls the check box's action function
+   SCREEN_OBJECT_T so;
+   //UCHAR    text[51];
+   UCHAR* text;
+   int      checked;   // use TRUE or FALSE
+   void    (_far* cbf)();   // cbf() calls the check box's action function
 } CHECK_BOX_T;
 
 
-extern void DisplayCheckBox(CHECK_BOX_T *cb);
-extern void CheckBoxOnKeyPress(CHECK_BOX_T *cb, int c);
-extern void CheckBoxOnClick(CHECK_BOX_T *cb);
-extern void CheckBoxOnMouseDown(CHECK_BOX_T *cb);
-extern void CheckBoxOnMouseUp(CHECK_BOX_T *cb);
+extern void DisplayCheckBox(CHECK_BOX_T* cb);
+extern void CheckBoxOnKeyPress(CHECK_BOX_T* cb, int c);
+extern void CheckBoxOnClick(CHECK_BOX_T* cb);
+extern void CheckBoxOnMouseDown(CHECK_BOX_T* cb);
+extern void CheckBoxOnMouseUp(CHECK_BOX_T* cb);
 
 #endif

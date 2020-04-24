@@ -53,13 +53,13 @@ SBRS = BLDRSRC.SBR
 
 BLDRSRC_DEP = 
 
-all:	$(PROJ).EXE $(PROJ).BSC
+all:   $(PROJ).EXE $(PROJ).BSC
 
-BLDRSRC.OBJ:	BLDRSRC.C $(BLDRSRC_DEP)
-	$(CC) $(CFLAGS) $(CCREATEPCHFLAG) /c BLDRSRC.C
+BLDRSRC.OBJ:   BLDRSRC.C $(BLDRSRC_DEP)
+   $(CC) $(CFLAGS) $(CCREATEPCHFLAG) /c BLDRSRC.C
 
-$(PROJ).EXE::	BLDRSRC.OBJ $(OBJS_EXT) $(DEFFILE)
-	echo >NUL @<<$(PROJ).CRF
+$(PROJ).EXE::   BLDRSRC.OBJ $(OBJS_EXT) $(DEFFILE)
+   echo >NUL @<<$(PROJ).CRF
 BLDRSRC.OBJ +
 $(OBJS_EXT)
 $(PROJ).EXE
@@ -69,13 +69,13 @@ d:\msvc\mfc\lib\+
 $(LIBS)
 $(DEFFILE);
 <<
-	link $(LFLAGS) @$(PROJ).CRF
+   link $(LFLAGS) @$(PROJ).CRF
 
 run: $(PROJ).EXE
-	$(PROJ) $(RUNFLAGS)
+   $(PROJ) $(RUNFLAGS)
 
 
 $(PROJ).BSC: $(SBRS)
-	bscmake @<<
+   bscmake @<<
 /o$@ $(SBRS)
 <<

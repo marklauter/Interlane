@@ -9,45 +9,45 @@
 
 typedef struct
 {
-	SCREEN_OBJECT_T		so;	
-						
-    int					max_length;
-    int					enabled;
+   SCREEN_OBJECT_T      so;
 
-	UCHAR				*text;	
+   int               max_length;
+   int               enabled;
 
-	// attached scroll bar, if any
-	SCROLL_BAR_T		*sbobj;
+   UCHAR* text;
 
-	void				(_far * OnChange)();
+   // attached scroll bar, if any
+   SCROLL_BAR_T* sbobj;
 
-	int					length;
+   void            (_far* OnChange)();
 
-	int					line_start[MEMO_MAX_LINES];
-	int					line_length[MEMO_MAX_LINES];
-	UCHAR				cursor_col;	// current column
-	UCHAR				cursor_row;	// current row
-	UCHAR				rows;
-	// Displayed area variables
-	int					display_top;
-	int					display_height;
+   int               length;
+
+   int               line_start[MEMO_MAX_LINES];
+   int               line_length[MEMO_MAX_LINES];
+   UCHAR            cursor_col;   // current column
+   UCHAR            cursor_row;   // current row
+   UCHAR            rows;
+   // Displayed area variables
+   int               display_top;
+   int               display_height;
 } MEMOBOX_T;
 
 // function call example
-//void				(_far * OnChange)();	//(* OnScroll)(); <- thats a call!!!
+//void            (_far * OnChange)();   //(* OnScroll)(); <- thats a call!!!
 
 
-extern void MemoBoxScroll(MEMOBOX_T *memo_box, int direction);
-extern void MemoBoxPaint(MEMOBOX_T *memo_box);
-extern void MemoBoxMouseDown(MEMOBOX_T *memo_box);
-extern void MemoBoxMouseUp(MEMOBOX_T *memo_box);
-extern void MemoBoxClick(MEMOBOX_T *memo_box);
-extern void MemoBoxKeyPress(MEMOBOX_T *memo_box, int c);
+extern void MemoBoxScroll(MEMOBOX_T* memo_box, int direction);
+extern void MemoBoxPaint(MEMOBOX_T* memo_box);
+extern void MemoBoxMouseDown(MEMOBOX_T* memo_box);
+extern void MemoBoxMouseUp(MEMOBOX_T* memo_box);
+extern void MemoBoxClick(MEMOBOX_T* memo_box);
+extern void MemoBoxKeyPress(MEMOBOX_T* memo_box, int c);
 
-extern void MemoDownArrow(MEMOBOX_T *memo_box);
-extern void MemoUpArrow(MEMOBOX_T *memo_box);
-extern void MemoPageUp(MEMOBOX_T *memo_box);
-extern void MemoPageDown(MEMOBOX_T *memo_box);
-extern void MemoRefreshAll(MEMOBOX_T *memo);
+extern void MemoDownArrow(MEMOBOX_T* memo_box);
+extern void MemoUpArrow(MEMOBOX_T* memo_box);
+extern void MemoPageUp(MEMOBOX_T* memo_box);
+extern void MemoPageDown(MEMOBOX_T* memo_box);
+extern void MemoRefreshAll(MEMOBOX_T* memo);
 
 #endif

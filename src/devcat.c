@@ -27,26 +27,26 @@
 // Device Categories
 // From 2box.h
 ////////////////////////////////////////////////
-//#define ALL_CATEGORIES			0
+//#define ALL_CATEGORIES         0
 //#define LIGHTING_CATEGORY       1
 //#define ENVIRONMENTAL_CATEGORY  2
 //#define POOL_SPA_CATEGORY       3
 //#define SPRINKLER_CATEGORY      4
 //#define ALERT_DEVICE_CATEGORY   5
-//#define SECURITY				6
+//#define SECURITY            6
 
-DEVICE_CATEGORY_LIST_T	dev_cat = {	5,
-									"ALL",
-									"Lighting",
-									"Comfort Control",
-									"Pool/Spa",
-									"Sprinkler"
-								};
-//									"Alert",
-//									"Security"
+DEVICE_CATEGORY_LIST_T   dev_cat = { 5,
+                           "ALL",
+                           "Lighting",
+                           "Comfort Control",
+                           "Pool/Spa",
+                           "Sprinkler"
+};
+//                           "Alert",
+//                           "Security"
 
 
-void DisplayDeviceCategory(UCHAR *desc, int top, int left, UCHAR color)
+void DisplayDeviceCategory(UCHAR* desc, int top, int left, UCHAR color)
 {
-	ptext(desc, top, left, color);
+   ptext(desc, top, left, color);
 }
